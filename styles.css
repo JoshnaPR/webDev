@@ -5,8 +5,17 @@
 }
 
 @font-face {
-  font-family: "UWBEncodeSansNarrow, sans-serif";
-  src: url(C:\Users\joshn\OneDrive\Documents\HTML\Practice\code1\fonts\EncodeSansNarrow-700-Bold.ttf);
+  font-family: "UWBEncodeSansNarrow";
+  src: url("./fonts/EncodeSansNarrow-700-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UWBEncodeSansNarrowThin";
+  src: url("./fonts/EncodeSansNarrow-100-Thin") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* This is for the purple band with the logo, "Bothell" and search button. */
@@ -33,10 +42,13 @@
 }
 
 .searchButton {
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Spacing between icon and button */
+  justify-content: flex-end; /* Align to right */
   padding-right: 15px;
-  padding-top: 0px;
   margin-right: 5px;
-  float: right;
+  margin-left: 26rem;
 }
 
 .quick-links-button {
@@ -52,7 +64,12 @@
   height: 2.8125rem;
   font-weight: 800;
   transform: skewX(-20deg);
-  /* transition: 0.3s ease; */
+}
+
+/* Ensure the SVG does not stretch */
+.searchButton svg {
+  width: 40px; /* Adjust width */
+  height: auto;
 }
 
 /* School of Science, Tech, Engn,&Math box */
@@ -216,6 +233,7 @@ li {
 }
 .breadcrumbs li {
   text-decoration: underline;
+  font-family: "UWBEncodeSansNarrowThin", sans-serif;
 }
 .breadcrumbs .breadcrumbs-separator {
   display: inline-block;
@@ -232,9 +250,10 @@ h2 {
   color: #4b2e84;
   font-family: var(sans-serif);
   /* font-size: clamp(2.5rem, calc(1rem + 6vw), 3.125rem); */
-  font-size: 3.125rem;
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.8px;
+  margin-bottom: 10px;
 }
 .professor-section {
   margin-top: 15px;
@@ -255,7 +274,7 @@ h2 {
   margin-bottom: 15px;
 }
 .research-section {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 
 /* Education Section */
